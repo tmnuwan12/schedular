@@ -3,15 +3,16 @@
         <form class="list">
             <label class="item item-select">
                 <span class="input-label">Class</span>
-                <select></select>
+                <select ng-model="selectedClazz" ng-options="clazz.name for clazz in clazzDD"></select>
             </label>
             <label class="item item-select">
                 <span class="input-label">Subject</span>
-                <select></select>
+                <select ng-model="selectedSubject" ng-options="subject.name for subject in subjects"></select>
             </label>
             <label class="item item-input">
                 <span class="input-label">Frequency</span>
-                <input type="text" placeholder="Number of periods">
+                 <select ng-model="selectAllocation" ng-options="alloc.qty for alloc in allocs"></select>
+                
             </label>
         </form>
         <button id="addSubjectAllocationView-button8" class="button button-positive  button-block" ng-click="addSubjectAllocDetails()">Tap me!</button>

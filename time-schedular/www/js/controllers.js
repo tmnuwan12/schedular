@@ -61,9 +61,21 @@ angular.module('app.controllers', [])
 
 })
 
-.controller('addSubjectAllocationViewCtrl', function($scope) {
+.controller('addSubjectAllocationViewCtrl', function($scope, DropDownService) {
 
 
+    $scope.clazzDD = DropDownService.getClassDD();
+
+    $scope.subjects = DropDownService.getSubjectsDD();
+    
+
+    $scope.allocs = DropDownService.getAllocationQtyDD();
+console.log(DropDownService.getAllocationQtyDD());
+
+    $scope.selectedClazz = $scope.clazzDD[0];
+    $scope.selectedSubject = $scope.subjects[0];
+
+    $scope.selectAllocation = $scope.allocs[0];
 	$scope.addSubjectAllocDetails = function(){
 
 		
