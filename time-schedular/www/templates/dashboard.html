@@ -1,0 +1,20 @@
+<ion-view title="Dashboard" id="page2">
+    <ion-content padding="true" class="has-header">
+        <a ui-sref="tabsController.addInstructorView" id="dashboard-button1" style="font-size:-7px;border-radius:8px 8px 8px 8px;" class="button button-positive  button-block">Add Instructor</a>
+        <form class="list">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" placeholder="">
+            </label>
+        </form>
+        <ion-list>
+          <ion-item class="item-thumbnail-left" ng-repeat="inst in instructors">
+                Name : {{inst.instructorName}} <br>
+                Subject : {{inst.subject}} <br>
+                Allocation Qty : {{inst.allocatedQty}} <br>
+                Max Allocation Qty : {{inst.maxAllocationQty}} <br>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

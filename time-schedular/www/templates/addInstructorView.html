@@ -1,0 +1,21 @@
+<ion-view title="Add Instructor View" id="page5">
+    <ion-content padding="true" class="has-header">
+        <form class="list">
+            <label class="item item-input">
+                <span class="input-label">Name</span>
+                <input type="text" ng-model="instructor.name" placeholder="Instructor Name">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Subject</span>
+                <input type="text" ng-model="instructor.subject" placeholder="Instructor Subject">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Maximum Periods</span>
+                <input type="text" ng-model="instructor.maxallocations" placeholder="Maximum Allocations">
+            </label>
+        </form>
+        <button id="addInstructorView-button7" class="button button-positive  button-block icon ion-android-add-circle" ng-click="addInstructor()"></button>
+    </ion-content>
+</ion-view>
+
+
